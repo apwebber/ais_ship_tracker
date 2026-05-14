@@ -1,5 +1,5 @@
 {
-  "name": "AIS Ship Tracker Add On",
-  "url": "https://github.com/buttermilkgreen/ais_ship_tracker",
+  "name": "AIS Ship Tracker Add On TEST",
+  "url": "https://github.com/apwebber/ais_ship_tracker/tree/mmsi_filter",
   "maintainer": "JB <jakeblack@pm.me>"
 }

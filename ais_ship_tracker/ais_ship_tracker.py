@@ -35,6 +35,8 @@ try:
     lat_north = float(config['latitude_north'])
     lon_east = float(config['longitude_east'])
     BOUNDING_BOX = [[[lat_south, lon_west], [lat_north, lon_east]]]
+
+    tracked_mmsi = config['tracked_mmsi']
     
     dev_val = config.get('dev_mode', False)
     DEV_MODE = str(dev_val).lower() in ['true', '1', 't', 'y', 'yes'] if dev_val is not None else False
@@ -563,6 +565,10 @@ def on_open(ws):
         "BoundingBoxes": BOUNDING_BOX,
         "FilterMessageTypes": filter_types
     }
+
+    if tracked_mmsi:
+        subscription_message['FiltersShipMMSI'] = tracked_mmsi
+        
     ws.send(json.dumps(subscription_message))
 
 def start_tracker():

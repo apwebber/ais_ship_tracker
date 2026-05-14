@@ -20,6 +20,7 @@ options:
   latitude_north: 51.20
   include_class_b: false
   enable_map_entities: false
+  tracked_mmsi: []
   map_timeout_minutes: 30
   clear_map_on_startup: false
   dev_mode: false
@@ -31,6 +32,8 @@ schema:
   latitude_north: "float" 
   include_class_b: "bool?"
   enable_map_entities: "bool?"
+  tracked_mmsi:
+    - "str"
   map_timeout_minutes: "int?"
   clear_map_on_startup: "bool?"
   dev_mode: "bool?"
